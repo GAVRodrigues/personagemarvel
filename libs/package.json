@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "dependencies": {
+    "angular": "^1.7.9",
+    "angular-md5": "^0.1.10",
+    "bootstrap": "^4.4.1",
+    "ng-notify": "^0.7.1",
+    "@uirouter/angularjs": "^1.0.23",
+    "ui-bootstrap4": "^3.0.6"
+  }
+}

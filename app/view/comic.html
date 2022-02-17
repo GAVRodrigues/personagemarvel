@@ -1,0 +1,27 @@
+<div class="modal-content box-shadow">
+  <div class="modal-header">
+    <h4 class="modal-title">Comic: <span class="font-weight-bold" ng-bind="vm.comic.title"></span></h4>
+    <button type="button" class="close no-print" data-dismiss="modal" ng-click="vm.fechar()">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-6 d-flex justify-content-center">
+        <a ng-href="{{vm.comic.urls[0].url}}" target="_blank">
+          <img class="thumbnail-detalhes" ng-src="{{vm.comic.thumbnail.path + '.' + vm.comic.thumbnail.extension}}">
+        </a>
+      </div>
+      <div class="col-6">
+        <b>Nome:</b> <span ng-bind="vm.comic.title"></span>
+        <br />
+        <b>Descrição:</b> <span ng-bind="vm.comic.description | vazio"></span>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-sm btn-danger" ng-click="vm.fechar()">
+      Fechar
+    </button>
+  </div>
+</div>

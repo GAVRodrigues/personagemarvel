@@ -1,0 +1,131 @@
+@import url(../../libs/node_modules/bootstrap/dist/css/bootstrap.min.css);
+@import url(../../libs/node_modules/ng-notify/dist/ng-notify.min.css);
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css";
+/* line 5, ../sass/screen.scss */
+.logo {
+  height: 40px;
+}
+
+/* line 9, ../sass/screen.scss */
+.seta {
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 15, ../sass/screen.scss */
+.card-inicio {
+  width: 500px;
+  background-color: #d9d9d9;
+  border: #202124;
+}
+
+/* line 21, ../sass/screen.scss */
+.header {
+  width: 100%;
+  background-color: #111111;
+  position: fixed;
+}
+
+/* line 27, ../sass/screen.scss */
+#lupa {
+  float: left;
+  margin: 3px 30px 8px -25px;
+  cursor: pointer;
+}
+
+/* line 33, ../sass/screen.scss */
+#lupa:after {
+  font-family: FontAwesome;
+  font-size: 14px;
+  content: "\f002";
+}
+
+/* line 39, ../sass/screen.scss */
+.conteudo {
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #ececec;
+}
+
+/* line 45, ../sass/screen.scss */
+.cards {
+  padding-bottom: 80px;
+}
+
+/* line 49, ../sass/screen.scss */
+.card {
+  width: 355px;
+  background-color: #202124;
+  color: #d9d9d9;
+  margin-left: 30px;
+}
+
+/* line 56, ../sass/screen.scss */
+.thumbnail {
+  width: 80px;
+  height: 80px;
+}
+
+/* line 61, ../sass/screen.scss */
+.name {
+  color: #d9d9d9 !important;
+  font-size: 25px;
+  line-height: 0;
+}
+
+/* line 67, ../sass/screen.scss */
+.thumbnail-detalhes {
+  max-width: 375px;
+  max-height: 325px;
+  width: auto;
+  height: auto;
+}
+
+/* line 74, ../sass/screen.scss */
+.text-divider {
+  margin: 0.5em 0;
+  line-height: 0;
+  text-align: center;
+}
+
+/* line 80, ../sass/screen.scss */
+.text-divider:before {
+  content: " ";
+  display: block;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+/* line 87, ../sass/screen.scss */
+.text-divider span {
+  background-color: white;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+/* line 93, ../sass/screen.scss */
+.table-comics {
+  border-bottom: 1px solid #dee2e6;
+}
+
+@media only screen and (max-width: 755px) {
+  /* line 98, ../sass/screen.scss */
+  .cards {
+    justify-content: center;
+  }
+
+  /* line 102, ../sass/screen.scss */
+  .card {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 992px) {
+  /* line 108, ../sass/screen.scss */
+  .thumbnail-detalhes {
+    max-width: 20vh;
+    max-height: 30vh;
+    width: auto;
+    height: auto;
+  }
+}

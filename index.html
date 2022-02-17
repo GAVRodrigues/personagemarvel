@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt_br" ng-app="app">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Buscar Personagem - Marvel</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="icon" href="app/images/favicon.png">
+
+  <link rel="stylesheet" href="app/css/screen.css">
+  <base href="/">
+</head>
+
+<body>
+  <ui-view></ui-view>
+
+  <!-- Core -->
+  <script src="libs/node_modules/angular/angular.js"></script>
+  <script src="libs/node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="libs/node_modules/angular-md5/angular-md5.min.js"></script>
+  <script src="libs/node_modules/ng-notify/dist/ng-notify.min.js"></script>
+  <script src="libs/node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls.js"></script>
+  <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+
+  <!-- Config -->
+  <script src="app/js/config/app.modules.js"></script>
+  <script src="app/js/config/app.routes.js"></script>
+  <script src="app/js/filters/app.filter.js"></script>
+
+  <!-- Controllers -->
+  <script src="app/js/controllers/home.controller.js"></script>
+  <script src="app/js/controllers/detalhes.controller.js"></script>
+  <script src="app/js/controllers/comic.controller.js"></script>
+
+  <!-- Services -->
+  <script src="app/js/services/marvel.service.js"></script>
+</body>
+
+</html>

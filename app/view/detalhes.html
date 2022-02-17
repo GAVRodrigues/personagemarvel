@@ -1,0 +1,46 @@
+<div class="modal-content" ng-show="vm.visualizarModal && !vm.loading">
+  <div class="modal-header">
+    <h4 class="modal-title">Detalhes: <span class="font-weight-bold" ng-bind="vm.detalhes.name"></span></h4>
+    <button type="button" class="close no-print" data-dismiss="modal" ng-click="vm.fechar()">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body pb-0">
+    <div class="row">
+      <div class="col-6 d-flex justify-content-center">
+        <a ng-href="{{vm.detalhes.urls[0].url}}" target="_blank">
+          <img class="thumbnail-detalhes"
+            ng-src="{{vm.detalhes.thumbnail.path + '.' + vm.detalhes.thumbnail.extension}}">
+        </a>
+      </div>
+      <div class="col-6">
+        <b>Nome:</b> <span ng-bind="vm.detalhes.name"></span>
+        <br />
+        <b>Descrição:</b> <span ng-bind="vm.detalhes.description | vazio"></span>
+      </div>
+    </div>
+    <div class="mt-5" ng-show="vm.detalhes.comics.items.length > 0">
+      <h5 class="text-divider">
+        <span>Comics</span>
+      </h5>
+      <div class="row text-center mt-4">
+        <div class="form-group col-12">
+          <table class="table table-sm table-comics">
+            <tbody>
+              <tr ng-repeat="comic in vm.detalhes.comics.items">
+                <td class="text-center p-2" role="button" ng-bind="comic.name"
+                  ng-click="vm.verComic(comic.resourceURI)"></td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-sm btn-danger" ng-click="vm.fechar()">
+      Fechar
+    </button>
+  </div>
+</div>

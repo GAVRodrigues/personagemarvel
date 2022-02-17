@@ -1,0 +1,42 @@
+<div class="header pb-2">
+  <form ng-submit="vm.buscarPersonagem()">
+    <div class="row justify-content-center mt-3 mb-3">
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-center">
+        <img class="logo ml-2 mr-2" src="app/images/favicon.png" alt="marvel logo">
+        <input class="form-control" type="text" name="personagem" id="personagem" placeholder="Digite um personagem"
+          ng-model="vm.personagem">
+        <div id="lupa" ng-click="vm.buscarPersonagem()"></div>
+      </div>
+  </form>
+</div>
+<div class="conteudo">
+  <div class="row text-center align-items-center" ng-show="vm.cards.length == 0 && !vm.loading">
+    <div class="card-body card-inicio shadow border border-dark pt-1 pb-3">
+      <img class="seta center d-flex" src="/app/images/arrow-up.png">
+      <span>Pesquise um personagem para começar sua experiência!</span>
+    </div>
+  </div>
+  <div class="text-center mt-4" ng-show="vm.loading">
+    <div class="spinner-border" role="status">
+    </div>
+  </div>
+  <div class="row cards pt-4" ng-show="!vm.loading">
+    <div class="card p-0 mb-3 shadow" ng-repeat="card in vm.cards track by $index">
+      <div class="card-body p-0 m-3">
+        <div class="row">
+          <div class="col-3">
+            <a ng-href="{{card.urls[0].url}}" target="_blank">
+              <img class="thumbnail mr-2 rounded-circle" ng-src={{card.thumbnail}}>
+            </a>
+          </div>
+          <div class="col-9 mt-1">
+            <b><span class="name" role="button" ng-click="vm.detalhes(card.id)" ng-bind="card.name"></span></b>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <span role="button" ng-click="vm.detalhes(card.id)"><b>+</b> Detalhes</span>
+      </div>
+    </div>
+  </div>
+</div>
